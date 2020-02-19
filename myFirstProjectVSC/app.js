@@ -6,3 +6,8 @@ const title = React.createElement(
 );
 
 console.log(title);
+
+ReactDOM.render(
+    title,
+    document.getElementById('root')
+);
