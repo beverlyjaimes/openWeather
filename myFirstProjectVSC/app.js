@@ -4,7 +4,7 @@ const desc = <p>I just learned how to create a React node and rendor it into the
 
 const header = React.createElement(
     'header',
-    null,
+
     title,
     desc
 );
