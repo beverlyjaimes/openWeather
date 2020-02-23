@@ -11,6 +11,7 @@ const Player = () => {
         <span className="player-name">
             Vic
         </span>
+        <Counter />
     </div>
     );
 }
@@ -27,5 +28,6 @@ const Counter = () => {
 
 ReactDOM.render(
     <Player/>,
+    
     document.getElementById('root')
 );
