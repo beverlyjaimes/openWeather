@@ -7,6 +7,7 @@ const header =(
     <header>
         <h1 id= {myTitleID}> { name }'s First React Element</h1>
         <p>{ desc}</p>
+        {/*this is a jsx comment*/}
     </header>
 );
 
