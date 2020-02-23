@@ -11,8 +11,9 @@ const Player = () => {
             Vic
         </span>
         <div className="counter">
-            <button>-</button>
-            <button>+</button>
+            <button className="counter-action decrement">-</button>
+            <span>20</span>
+            <button className="counter-action increment">+</button>
         </div>
     </div>
 }
