@@ -12,6 +12,7 @@ const Player = () => {
             Vic
         </span>
         <Counter />
+        {/* can use counter inside of player component */}
     </div>
     );
 }
