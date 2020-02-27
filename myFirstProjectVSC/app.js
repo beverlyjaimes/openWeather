@@ -17,6 +17,16 @@ const Player = () => {
     );
 }
 
+const App = () => {
+    return (
+        <div className="scoreboard">
+            <Header />
+            {/*Players list*/}
+            <Player />
+        </div>
+    )
+}
+
 const Counter = () => {
     return (
         <div className="counter">
