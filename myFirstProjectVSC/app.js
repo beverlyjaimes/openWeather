@@ -50,19 +50,18 @@ const App = (props) => {
     return (
         <div className="scoreboard">
             <Header title = "Scoreboard" 
-            totalPlayers ={ 1 }/>
+            totalPlayers ={ props.initialPlayers.length }/>
 
             {/*Players list*/}
             {props.initialPlayers.map( player => 
                 <Player 
-                name="Vic"  
-                score={50}
-                    
+                name={player.name}  
+                score={player.score}
+
                 />
         
             )}
             
-            <Player name="Heebee"  score={50}/> <Player name="Alex"  score={50}/>
         </div>
     )
 }
