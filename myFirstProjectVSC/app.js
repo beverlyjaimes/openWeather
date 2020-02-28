@@ -39,6 +39,7 @@ const App = () => {
 
             {/*Players list*/}
             <Player name="Vic"  score={50}/>
+            <Player name="Heebee"  score={50}/> <Player name="Alex"  score={50}/>
         </div>
     )
 }
