@@ -12,7 +12,7 @@ body {
     text-align: center;
     display: flex;
     align-items: center;
-    background-color: #8063FA;
+    background-color: rgb(51, 151, 158);
     border-bottom: solid 2px #D4CAFF;
   }
   
@@ -27,7 +27,7 @@ body {
   
   form {
     display: flex;
-    background-color: #8063FA;
+    background-color:rgb(51, 151, 158);
   }
   
   input[type=text] {
