@@ -11,7 +11,7 @@ const players = [
     },   {
         name: "Alex",
         score: 2,
-        id: 3
+        id: 2
     }
 ];
 
@@ -61,7 +61,7 @@ const App = (props) => {
                 <Player 
                 name={player.name}  
                 score={player.score}
-                key={ player.id.toString()}
+                key={player.id.toString()}
 
                 />
         
