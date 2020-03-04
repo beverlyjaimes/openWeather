@@ -1,20 +1,3 @@
-const players = [
-    {
-        name: "Vic",
-        score: 50,
-        id: 1
-    },
-    {
-        name: "Heebee",
-        score: 56,
-        id: 2
-    },   {
-        name: "Alex",
-        score: 2,
-        id: 3
-    }
-];
-
 
 const Header = (props) =>  {
     console.log(props)
@@ -30,6 +13,7 @@ const Player = (props) => {
     return(
     <div className="player">
         <span className="player-name">
+        <buttone className="remove-player" onClick={ () => props.removePlayer(props.id)}></buttone>
             { props.name }
         </span>
         <Counter />
@@ -72,18 +56,42 @@ class Counter extends React.Component {
 
 
 class App extends React.Component {
+    state = {
+        players:[
+            {
+                name: "Vic",
+                id: 1
+            },
+            {
+                name: "Heebee",
+                id: 2
+            },   {
+                name: "Alex",
+                id: 3
+            }
+        ]
+    };
+    handleRemovePlayer =(id) => {
+        this.setState( prevState => {
+            return {
+                players: prevState.players.fileter( p => p.id !== id )
+            };
+        });
+    }
     render (){
         return (
             <div className="scoreboard">
                 <Header title = "Scoreboard" 
-                totalPlayers ={ props.initialPlayers.length }/>
+                totalPlayers ={ this.state.players.length }/>
                 {/* returns number of player objects in array*/}
     
                 {/*Players list*/}
-                {props.initialPlayers.map( player => 
+                {this.state.players.map( player => 
                     <Player 
                     name={player.name} 
+                    id={player.id}
                     key={player.id.toString()}
+                    removePlayer={this.handleRemovePlayer}
     
                     />
             
@@ -96,7 +104,7 @@ class App extends React.Component {
 }
 
 ReactDOM.render(
-    <App initialPlayers={ players} />,
+    <App />,
     
     document.getElementById('root')
 );
