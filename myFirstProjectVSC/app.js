@@ -32,19 +32,27 @@ const Player = (props) => {
         <span className="player-name">
             { props.name }
         </span>
-        <Counter score={props.score} />
+        <Counter />
         {/* can use counter inside of player component */}
     </div>
     );
 }
 
 class Counter extends React.Component {
+
+    constructor() {
+        super()
+        this.state = {
+            score = 0
+        };
+    }
+
     render() {
         return (
             <div className="counter">
                 <button className="counter-action decrement">-</button>
                 {/*props are properties of the component itself so use THIS*/}
-                <span className="counter-score">{ this.props.score }</span>
+                <span className="counter-score">{ this.state.score }</span>
                 <button className="counter-action increment">+</button>
             </div>
         );
@@ -63,8 +71,7 @@ const App = (props) => {
             {/*Players list*/}
             {props.initialPlayers.map( player => 
                 <Player 
-                name={player.name}  
-                score={player.score}
+                name={player.name} 
                 key={player.id.toString()}
 
                 />
