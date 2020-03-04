@@ -78,6 +78,7 @@ class App extends React.Component {
             };
         });
     }
+
     render (){
         return (
             <div className="scoreboard">
@@ -108,7 +109,3 @@ ReactDOM.render(
     
     document.getElementById('root')
 );
-
-
-// python http://localhost:8000/
-// -m SimpleHTTPServer 8000
