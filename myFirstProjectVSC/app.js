@@ -44,8 +44,12 @@ class Counter extends React.Component {
         score: 0
     };
 
-    incrementScore() {
-        console.log('hi from inside increment score');
+    incrementScore = () => {
+        // console.log('hi from inside increment score');
+        // react needs to be told when state changes
+        this.setState({
+            score: this.state.score + 1
+        });
     }
 
     render() {
