@@ -13,7 +13,7 @@ const Player = (props) => {
     return(
     <div className="player">
         <span className="player-name">
-        <buttone className="remove-player" onClick={ () => props.removePlayer(props.id)}></buttone>
+        <button className="remove-player" onClick={ () => props.removePlayer(props.id)}>x</button>
             { props.name }
         </span>
         <Counter />
@@ -74,7 +74,7 @@ class App extends React.Component {
     handleRemovePlayer =(id) => {
         this.setState( prevState => {
             return {
-                players: prevState.players.fileter( p => p.id !== id )
+                players: prevState.players.filter( p => p.id !== id )
             };
         });
     }
