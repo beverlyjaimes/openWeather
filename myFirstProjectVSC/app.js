@@ -71,25 +71,28 @@ class Counter extends React.Component {
 }
 
 
-const App = (props) => {
-    return (
-        <div className="scoreboard">
-            <Header title = "Scoreboard" 
-            totalPlayers ={ props.initialPlayers.length }/>
-            {/* returns number of player objects in array*/}
-
-            {/*Players list*/}
-            {props.initialPlayers.map( player => 
-                <Player 
-                name={player.name} 
-                key={player.id.toString()}
-
-                />
-        
-            )}
+class App extends React.Component {
+    render (){
+        return (
+            <div className="scoreboard">
+                <Header title = "Scoreboard" 
+                totalPlayers ={ props.initialPlayers.length }/>
+                {/* returns number of player objects in array*/}
+    
+                {/*Players list*/}
+                {props.initialPlayers.map( player => 
+                    <Player 
+                    name={player.name} 
+                    key={player.id.toString()}
+    
+                    />
             
-        </div>
-    )
+                )}
+                
+            </div>
+        )
+    }
+   
 }
 
 ReactDOM.render(
