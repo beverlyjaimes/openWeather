@@ -44,6 +44,11 @@ class Counter extends React.Component {
         score: 0
     };
 
+    decrementScore = () => {
+        this.setState({
+            score: this.state.score -1
+        });
+    }
     incrementScore = () => {
         // console.log('hi from inside increment score');
         // react needs to be told when state changes
@@ -55,7 +60,7 @@ class Counter extends React.Component {
     render() {
         return (
             <div className="counter">
-                <button className="counter-action decrement">-</button>
+                <button className="counter-action decrement" onClick={this.decrementScore}>-</button>
                 {/*props are properties of the component itself so use THIS*/}
                 <span className="counter-score">{ this.state.score }</span>
                 <button className="counter-action increment" onClick={this.incrementScore}>+</button>
