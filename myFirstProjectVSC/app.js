@@ -39,13 +39,11 @@ const Player = (props) => {
 }
 
 class Counter extends React.Component {
+        /*shortcut for state*/
+    state = {
+        score: 0
+    };
 
-    constructor() {
-        super()
-        this.state = {
-            score = 0
-        };
-    }
 
     render() {
         return (
